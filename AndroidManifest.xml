@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.speakmeplugin"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+         <service android:name=".SpeakMePlugin"
+                  android:exported="true">
+            <intent-filter>
+                <action android:name="speak.me.action.PICK_PLUGIN" />
+                <category android:name="aexp.intent.category.DEFAULT_PLUGIN_CATEGORY" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
